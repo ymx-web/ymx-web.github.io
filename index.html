@@ -12,6 +12,10 @@
     --bg: #fafafa;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     font-family: "Inter", "Segoe UI", Arial, sans-serif;
     background-color: var(--bg);
@@ -20,9 +24,45 @@
     color: var(--text);
   }
 
+  /* ===== Navigation Bar ===== */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    z-index: 1000;
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  nav a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.2s ease;
+  }
+
+  nav a:hover, nav a.active {
+    color: #0b66c3;
+    border-bottom: 2px solid #0b66c3;
+    padding-bottom: 2px;
+  }
+
+  /* ===== Main Container ===== */
   .container {
     max-width: 960px;
-    margin: 50px auto;
+    margin: 100px auto 50px auto;
     background: white;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
@@ -84,6 +124,29 @@
     font-size: 14px;
   }
 
+  /* ===== Back to Top Button ===== */
+  #topBtn {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 999;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+  }
+
+  #topBtn:hover {
+    background-color: #0b66c3;
+  }
+
   @media (max-width: 700px) {
     .container {
       padding: 30px 25px;
@@ -93,6 +156,20 @@
 </head>
 
 <body>
+  <!-- ===== Navigation Bar ===== -->
+  <nav>
+    <ul>
+      <li><a href="#about" class="active">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#honors">Honors</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== Main Content ===== -->
   <div class="container">
     <header>
       <img src="profile.jpg" alt="Profile Photo">
@@ -102,7 +179,7 @@
       <p><a href="https://github.com/ymx-web">GitHub</a> · <a href="https://scholar.google.com/">Google Scholar</a></p>
     </header>
 
-    <section>
+    <section id="about">
       <h2>About Me</h2>
       <p>
         I am a Ph.D. candidate in the <b>Human–Computer Interaction Laboratory</b> at the 
@@ -121,12 +198,40 @@
       </p>
     </section>
 
-    <section>
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li><b>Ph.D. Candidate</b>, Computer Application Technology, 
+          <i>University of Chinese Academy of Sciences (UCAS)</i> · 2023 – Present</li>
+        <li><b>M.Sc.</b>, Astrometry and Celestial Mechanics, 
+          <i>University of Chinese Academy of Sciences (UCAS)</i> · 2020 – 2023</li>
+        <li><b>B.Eng.</b>, Information Engineering, 
+          <i>Qingdao University of Science and Technology</i> · 2014 – 2018</li>
+      </ul>
+    </section>
+
+    <section id="experience">
+      <h2>Professional Experience</h2>
+      <ul>
+        <li>
+          <b>IT Engineer</b>, China United Network Communications Group Co., Ltd. (China Unicom) · 
+          <i>Jul 2018 – Jun 2020</i><br>
+          Worked on network systems and data management, focusing on software optimization and information processing.
+        </li>
+        <li>
+          <b>Cloud Computing Intern</b>, Amazon China Headquarters · 
+          <i>Jul 2016 – Mar 2017</i><br>
+          Participated in cloud infrastructure projects and gained experience in distributed computing and data services.
+        </li>
+      </ul>
+    </section>
+
+    <section id="publications">
       <h2>Selected Publications</h2>
       <ul>
         <li>
           <b>SLiNT:</b> Structure-aware Language Model with Injection and Contrastive Training for Knowledge Graph Completion.<br>
-          <i>EMNLP 2025</i> — <b>First Author</b>
+          <i>EMNLP 2025 (Findings)</i> — <b>First Author</b>
         </li>
         <li>
           <b>Constraint-Aware Hypergraph Reasoning via Generative Rule Injection in Knowledge Graphs.</b><br>
@@ -143,7 +248,7 @@
       </ul>
     </section>
 
-    <section>
+    <section id="projects">
       <h2>Projects</h2>
       <ul>
         <li>🧠 <b>Intelligent Generative Decision-Making Knowledge Base</b> (Ministerial-level Project)</li>
@@ -151,12 +256,12 @@
       </ul>
     </section>
 
-    <section>
+    <section id="skills">
       <h2>Skills</h2>
       <p>C++ · Python · Data Mining · Web Crawling · Databases · Academic Writing</p>
     </section>
 
-    <section>
+    <section id="honors">
       <h2>Honors & Awards</h2>
       <ul>
         <li>🎖 2022 National Postgraduate Scholarship</li>
@@ -167,5 +272,41 @@
 
     <footer>© 2025 Mengxue Yang | University of Chinese Academy of Sciences</footer>
   </div>
+
+  <!-- Back to Top Button -->
+  <button id="topBtn" title="Back to top">↑</button>
+
+  <script>
+    // Smooth scroll navbar highlight
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (scrollY >= sectionTop) current = section.getAttribute("id");
+      });
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+
+    // Back to top button
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = function() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
+    };
+    topBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
 </body>
 </html>
