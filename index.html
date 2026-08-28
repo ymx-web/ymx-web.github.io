@@ -1,165 +1,211 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mengxue Yang | UCAS</title>
-<style>
-  :root {
-    --primary: #1f4e79;
-    --secondary: #5c7ca5;
-    --text: #333;
-    --bg: #fafafa;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  html {
-    scroll-behavior: smooth;
-  }
+  <title>Mengxue Yang | UCAS</title>
 
-  body {
-    font-family: "Inter", "Segoe UI", Arial, sans-serif;
-    background-color: var(--bg);
-    margin: 0;
-    padding: 0;
-    color: var(--text);
-  }
-
-  /* ===== Navigation Bar ===== */
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: white;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    z-index: 1000;
-  }
-
-  nav ul {
-    margin: 0;
-    padding: 10px 0;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-  }
-
-  nav a {
-    color: var(--primary);
-    font-weight: 600;
-    text-decoration: none;
-    font-size: 15px;
-    transition: color 0.2s ease;
-  }
-
-  nav a:hover, nav a.active {
-    color: #0b66c3;
-    border-bottom: 2px solid #0b66c3;
-    padding-bottom: 2px;
-  }
-
-  /* ===== Main Container ===== */
-  .container {
-    max-width: 960px;
-    margin: 100px auto 50px auto;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    padding: 50px 70px;
-  }
-
-  header {
-    text-align: center;
-    margin-bottom: 50px;
-  }
-
-  header img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  }
-
-  header h1 {
-    margin-top: 20px;
-    font-size: 26px;
-    color: var(--primary);
-  }
-
-  header p {
-    margin: 4px 0;
-    color: #555;
-  }
-
-  header a {
-    color: var(--primary);
-    text-decoration: none;
-  }
-
-  h2 {
-    border-bottom: 2px solid var(--primary);
-    color: var(--primary);
-    padding-bottom: 6px;
-    margin-top: 40px;
-  }
-
-  p, li {
-    line-height: 1.7;
-  }
-
-  ul {
-    padding-left: 20px;
-  }
-
-  li {
-    margin-bottom: 8px;
-  }
-
-  footer {
-    text-align: center;
-    color: #888;
-    margin-top: 40px;
-    font-size: 14px;
-  }
-
-  /* ===== Back to Top Button ===== */
-  #topBtn {
-    display: none;
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    z-index: 999;
-    background-color: var(--primary);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    font-size: 18px;
-    cursor: pointer;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.25);
-    transition: all 0.3s ease;
-  }
-
-  #topBtn:hover {
-    background-color: #0b66c3;
-  }
-
-  @media (max-width: 700px) {
-    .container {
-      padding: 30px 25px;
+  <style>
+    :root {
+      --primary: #1f4e79;
+      --secondary: #5c7ca5;
+      --text: #333;
+      --bg: #fafafa;
     }
-  }
-</style>
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      background-color: var(--bg);
+      margin: 0;
+      padding: 0;
+      color: var(--text);
+    }
+
+    /* ===== Navigation Bar ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      z-index: 1000;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 10px 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    nav li {
+      margin-bottom: 0;
+    }
+
+    nav a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 15px;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #0b66c3;
+      border-bottom: 2px solid #0b66c3;
+      padding-bottom: 2px;
+    }
+
+    /* ===== Main Container ===== */
+    .container {
+      max-width: 960px;
+      margin: 100px auto 50px auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      padding: 50px 70px;
+    }
+
+    /* ===== Header ===== */
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    header img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 28px;
+      color: var(--primary);
+    }
+
+    header p {
+      margin: 6px 0;
+      color: #555;
+    }
+
+    header a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    header a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== Sections ===== */
+    section {
+      scroll-margin-top: 80px;
+    }
+
+    h2 {
+      border-bottom: 2px solid var(--primary);
+      color: var(--primary);
+      padding-bottom: 6px;
+      margin-top: 40px;
+    }
+
+    h3 {
+      color: var(--secondary);
+      margin-top: 25px;
+      margin-bottom: 12px;
+    }
+
+    p,
+    li {
+      line-height: 1.7;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    a {
+      color: var(--primary);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      color: #888;
+      margin-top: 50px;
+      font-size: 14px;
+    }
+
+    /* ===== Back to Top Button ===== */
+    #topBtn {
+      display: none;
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 999;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+      transition: all 0.3s ease;
+    }
+
+    #topBtn:hover {
+      background-color: #0b66c3;
+    }
+
+    /* ===== Mobile ===== */
+    @media (max-width: 700px) {
+      .container {
+        margin-top: 120px;
+        padding: 30px 25px;
+        border-radius: 0;
+      }
+
+      nav ul {
+        gap: 14px;
+        padding: 10px 12px;
+      }
+
+      nav a {
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
 
 <body>
+
   <!-- ===== Navigation Bar ===== -->
   <nav>
     <ul>
       <li><a href="#about" class="active">About</a></li>
+      <li><a href="#research">Research</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#publications">Publications</a></li>
@@ -169,161 +215,465 @@
     </ul>
   </nav>
 
+
   <!-- ===== Main Content ===== -->
   <div class="container">
+
+    <!-- ===== Header ===== -->
     <header>
       <img src="profile.jpg" alt="Profile Photo">
+
       <h1>Mengxue Yang</h1>
-      <p>Doctoral Candidate · University of Chinese Academy of Sciences</p>
-      <p><a href="mailto:yangmengxue20@mails.ucas.ac.cn">yangmengxue20@mails.ucas.ac.cn</a></p>
-      <p><a href="https://github.com/ymx-web">GitHub</a> · <a href="https://scholar.google.com/">Google Scholar</a></p>
+
+      <p>
+        Ph.D. Candidate · University of Chinese Academy of Sciences
+      </p>
+
+      <p>
+        Knowledge Graphs · Large Language Models · LLM Agents
+      </p>
+
+      <p>
+        <a href="mailto:yangmengxue20@mails.ucas.ac.cn">Email</a> ·
+        <a href="https://github.com/ymx-web" target="_blank">GitHub</a> ·
+        <a href="YOUR_GOOGLE_SCHOLAR_URL" target="_blank">Google Scholar</a>
+      </p>
     </header>
 
+
+    <!-- ===== About ===== -->
     <section id="about">
       <h2>About Me</h2>
+
       <p>
-        I am a Ph.D. candidate in the <b>Human–Computer Interaction Laboratory</b> at the 
-        <b>Institute of Software, Chinese Academy of Sciences (ISCAS)</b>, and the 
-        <b>Intelligent Emergency Laboratory</b> at the 
-        <b>University of Chinese Academy of Sciences (UCAS)</b>, under the supervision of 
-        <b>Prof. Li Ying</b> and <b>Dr. Jiaqi Zhu</b>.
-        My research lies at the intersection of <b>knowledge graphs</b> and 
-        <b>large language models (LLMs)</b>, focusing on 
-        <b>structure-aware representation learning</b>, 
-        <b>knowledge extraction and alignment</b>, and 
-        <b>generative reasoning</b>. 
-        I aim to bridge symbolic and neural paradigms to build 
-        <b>explainable, structure-grounded intelligent systems</b> for 
-        <b>emergency management and decision support</b>.
+        I am a Ph.D. candidate in the
+        <b>Human–Computer Interaction Laboratory</b> at the
+        <b>Institute of Software, Chinese Academy of Sciences (ISCAS)</b>,
+        and the
+        <b>Intelligent Emergency Laboratory</b> at the
+        <b>University of Chinese Academy of Sciences (UCAS)</b>,
+        under the supervision of
+        <b>Prof. Ying Li</b> and <b>Dr. Jiaqi Zhu</b>.
+      </p>
+
+      <p>
+        My research focuses on
+        <b>knowledge-enhanced large language models and intelligent agents</b>,
+        with particular interests in
+        <b>structured knowledge representation</b>,
+        <b>knowledge reasoning and retrieval</b>, and
+        <b>long-term agent memory</b>.
+        My recent work explores how structured knowledge and memory can support
+        reliable reasoning and continuous evolution in LLM-based agents.
+      </p>
+
+      <p>
+        My broader goal is to bridge
+        <b>structured knowledge</b> and
+        <b>large language models</b>
+        to build intelligent systems that can effectively
+        <b>represent, retrieve, reason over, and evolve knowledge</b>
+        during long-term interactions.
       </p>
     </section>
 
+
+    <!-- ===== Research Interests ===== -->
+    <section id="research">
+      <h2>Research Interests</h2>
+
+      <ul>
+        <li>
+          <b>LLM Agents & Agent Memory</b> —
+          long-term memory, memory evolution, and continual agent learning
+        </li>
+
+        <li>
+          <b>Knowledge Graphs & Hypergraphs</b> —
+          structured representation and graph/hypergraph-based knowledge modeling
+        </li>
+
+        <li>
+          <b>Knowledge Reasoning</b> —
+          structure-guided reasoning and knowledge-enhanced large language models
+        </li>
+
+        <li>
+          <b>Retrieval-Augmented Generation</b> —
+          structured retrieval and knowledge-grounded generation
+        </li>
+      </ul>
+    </section>
+
+
+    <!-- ===== Education ===== -->
     <section id="education">
       <h2>Education</h2>
+
       <ul>
-        <li><b>Ph.D. Candidate</b>, Computer Application Technology, 
-          <i>University of Chinese Academy of Sciences (UCAS)</i> · 2023 – Present</li>
-        <li><b>M.Sc.</b>, Astrometry and Celestial Mechanics, 
-          <i>University of Chinese Academy of Sciences (UCAS)</i> · 2020 – 2023</li>
-        <li><b>B.Eng.</b>, Information Engineering, 
-          <i>Qingdao University of Science and Technology</i> · 2014 – 2018</li>
+        <li>
+          <b>Ph.D. Candidate</b>, Computer Application Technology,
+          <i>University of Chinese Academy of Sciences (UCAS)</i>
+          · 2023 – Present
+        </li>
+
+        <li>
+          <b>M.Sc.</b>, Astrometry and Celestial Mechanics,
+          <i>University of Chinese Academy of Sciences (UCAS)</i>
+          · 2020 – 2023
+        </li>
+
+        <li>
+          <b>B.Eng.</b>, Information Engineering,
+          <i>Qingdao University of Science and Technology</i>
+          · 2014 – 2018
+        </li>
       </ul>
     </section>
 
+
+    <!-- ===== Professional Experience ===== -->
     <section id="experience">
       <h2>Professional Experience</h2>
+
       <ul>
         <li>
-          <b>IT Engineer</b>, China United Network Communications Group Co., Ltd. (China Unicom) · 
-          <i>Jul 2018 – Jun 2020</i><br>
-          Worked on network systems and data management, focusing on software optimization and information processing.
+          <b>Research Intern</b>, Tencent ·
+          <i>2026</i><br>
+          Conducted research on <b>LLM agents and long-term memory</b>
+          for long-form content generation.
+          Developed a structured narrative agent memory framework for maintaining
+          evolving characters, events, relationships, and narrative states
+          across long-horizon generation, with a focus on
+          <b>memory consistency</b>,
+          <b>efficient retrieval</b>, and
+          <b>dynamic state evolution</b>.
         </li>
+
         <li>
-          <b>Cloud Computing Intern</b>, Amazon China Headquarters · 
+          <b>IT Engineer</b>,
+          China United Network Communications Group Co., Ltd. (China Unicom) ·
+          <i>Jul 2018 – Jun 2020</i><br>
+          Worked on network systems, data management, and software optimization
+          for large-scale telecommunications services.
+        </li>
+
+        <li>
+          <b>Cloud Computing Intern</b>, Amazon China ·
           <i>Jul 2016 – Mar 2017</i><br>
-          Participated in cloud infrastructure projects and gained experience in distributed computing and data services.
+          Participated in cloud computing and data service projects,
+          with experience in distributed systems and cloud infrastructure.
         </li>
       </ul>
     </section>
 
+
+    <!-- ===== Publications ===== -->
     <section id="publications">
       <h2>Selected Publications</h2>
+
+      <h3>Published / Accepted</h3>
+
       <ul>
         <li>
-          <b>HyperCoT:</b> Learning to Think on Hypergraph: HyperCoT for Structure Guided N_ary Knowledge Graph Completion.<br>
-          <i>To be accepted to ACL 2026</i> — <b>First Author</b>
+          <b>
+            Learning to Think on Hypergraph:
+            HyperCoT for Structure-Guided N-ary Knowledge Graph Completion.
+          </b><br>
+
+          <b>Mengxue Yang</b>, Jinming Li, Chun Yang, Jiaqi Zhu,
+          Jiafan Li, Guanhua Zhang, and Ying Li.<br>
+
+          <i>
+            Proceedings of the 64th Annual Meeting of the Association
+            for Computational Linguistics (ACL 2026), Long Papers
+          </i>,
+          pp. 25562–25579, 2026.<br>
+
+          <a href="https://aclanthology.org/2026.acl-long.1172/"
+             target="_blank">[Paper]</a>
+          · <b>First Author</b>
         </li>
+
+
         <li>
-          <b>SLiNT:</b> Structure-aware Language Model with Injection and Contrastive Training for Knowledge Graph Completion.<br>
-          <i>To be accepted EMNLP 2025</i> — <b>First Author</b>
+          <b>
+            SLiNT: Structure-aware Language Model with Injection and
+            Contrastive Training for Knowledge Graph Completion.
+          </b><br>
+
+          <i>
+            Proceedings of the 2025 Conference on Empirical Methods
+            in Natural Language Processing (EMNLP 2025)
+          </i>.<br>
+
+          <b>First Author</b>
         </li>
+
+
         <li>
-          <b>CARE: </b> A Constraint-Aware Hypergraph Framework for Knowledge-Driven Event-Centric Retrieval.</b><br>
-          <i>To be accepted to ICMR 2026</i> — <b>First-Author</b>
+          <b>
+            CARE: A Constraint-Aware Hypergraph Framework for
+            Knowledge-Driven Event-Centric Retrieval.
+          </b><br>
+
+          <i>
+            ACM International Conference on Multimedia Retrieval
+            (ICMR 2026)
+          </i>.<br>
+
+          <b>First Author</b>
         </li>
+
+
         <li>
-          <b>ViSR-KGC:</b> Visual Subgraph Reasoning with Vision-Language Models for Multimodal Knowledge Graph Completion.</b><br>
-          <i>To be submitted to ACM MM 2026</i> — <b>First-Co-Author</b>
+          <b>
+            ViSR-KGC: Visual Subgraph Reasoning with Vision-Language
+            Models for Multimodal Knowledge Graph Completion.
+          </b><br>
+
+          <i>
+            ACM Multimedia (ACM MM 2026)
+          </i>.<br>
+
+          <b>First Co-Author</b>
         </li>
-        <li>          
-          <b>Sharpness evaluation algorithm based on real-time auto-focusing of 1.2m telescope system.</b><br>          
-          <i>Acta Optica Sinica, 2023, 43(06): 0612006</i> — <b>First Author</b>        
+
+
+        <li>
+          <b>
+            Sharpness Evaluation Algorithm Based on Real-Time
+            Auto-Focusing of 1.2m Telescope System.
+          </b><br>
+
+          <i>
+            Acta Optica Sinica, 43(06): 0612006, 2023
+          </i>.<br>
+
+          <b>First Author</b>
         </li>
-        <li>          
-          <b>Optimization Algorithm for Satellite Laser Ranging Based on Greedy Dynamic Fusion.</b><br>          
-          <i>Progress in Laser and Optoelectronics, 2023, 60(07)</i> — <b>First Author</b>        
-        </li>        
+
+
+        <li>
+          <b>
+            Optimization Algorithm for Satellite Laser Ranging
+            Based on Greedy Dynamic Fusion.
+          </b><br>
+
+          <i>
+            Progress in Laser and Optoelectronics, 60(07), 2023
+          </i>.<br>
+
+          <b>First Author</b>
+        </li>
+      </ul>
+
+
+      <h3>Under Review</h3>
+
+      <ul>
+        <li>
+          <b>
+            EvoEpiHG: Self-Evolving Epistemic Hypergraph Framework
+            for Memory Consistency in Long-Session LLM Agents.
+          </b><br>
+
+          <i>Under Review, AAAI 2027</i>.<br>
+
+          <b>First Author</b>
+        </li>
+
+
+        <li>
+          <b>
+            MTSF-TL: Adaptive Multivariate Time Series Forecasting
+            Guided by Temporal Logic Properties.
+          </b><br>
+
+          <i>Under Review, KDD 2027</i>.<br>
+
+          <b>Collaborative Work</b>
+        </li>
       </ul>
     </section>
 
+
+    <!-- ===== Research Projects ===== -->
     <section id="projects">
-      <h2>Projects</h2>
+      <h2>Research Projects</h2>
+
       <ul>
-        <li>🧠 <b>Intelligent Generative Decision-Making Knowledge Base for Emergency Rescue</b> (Ministerial-level Project, 2023–present) — <b>Technical Core</b><br>
-        Built knowledge graph + LLM framework for structured plan reasoning and resource scheduling; addressed sparse multimodal data and cross‑domain knowledge fragmentation; deployed in provincial emergency management pilot; validated on 6 disaster scenarios (10 historical + 3 real‑time).</li>
+        <li>
+          🧠 <b>Long-Term Memory for LLM Agents</b>
+          · <i>2025–Present</i><br>
 
-        <li>💻 <b>MIIT Project: Industrial Real-Time Database Based on Next-Generation Information Technology</b> — <b>Technical Core</b><br>
-        Designed time-series data indexing and hybrid storage engine; optimized query latency by 30%; implemented efficient data ingestion pipeline for industrial IoT scenarios.</li>
+          Research on structured and self-evolving memory mechanisms
+          for long-horizon LLM agents.
+          Developed methods for organizing, retrieving, and dynamically
+          updating evolving knowledge, with particular emphasis on
+          <b>temporal consistency</b>,
+          <b>epistemic state modeling</b>, and
+          <b>memory evolution</b>.
+        </li>
 
-        <li>🧮 <b>Satellite Laser Ranging Task Scheduling Optimization</b> (NSFC Project, 2020–2022) — <b>Technical Core</b><br>
-        Built a unified scheduling model under multiple constraints; designed hybrid algorithm (parameterized optimization + dynamic programming) to resolve resource-task conflicts; improved actual observation efficiency by 22%; algorithm deployed in BeiDou SLR real‑time processing system.</li>
 
-        <li>🔬 <b>Telescope Auto-focusing Technology</b> (NSFC Sub-project, 2021–2023) — <b>Technical Core</b><br>
-        Proposed HFD‑ICA focus evaluation algorithm for overlapping defocus; designed three search strategies (iterative, curve fitting, quadratic); developed INDI‑based auto-focusing software on Ubuntu; reduced focusing time by 35% and increased target acquisition rate by 12%; supported 2 national space debris monitoring missions.</li>
+        <li>
+          🚨 <b>
+            Intelligent Knowledge and Decision Support for Emergency Rescue
+          </b>
+          · <i>Ministerial-level Research Project, 2023–Present</i><br>
+
+          Developed knowledge-enhanced intelligent systems for emergency rescue,
+          integrating <b>knowledge graphs</b>,
+          <b>large language models</b>, and
+          <b>structured reasoning</b>
+          to support knowledge organization, information retrieval,
+          and decision assistance in complex disaster scenarios.
+        </li>
+
+
+        <li>
+          💻 <b>
+            Industrial Real-Time Database Based on
+            Next-Generation Information Technology
+          </b>
+          · <i>MIIT Research Project</i><br>
+
+          Designed time-series data indexing and hybrid storage mechanisms
+          for industrial data management, and developed efficient data ingestion
+          and query pipelines for large-scale industrial IoT scenarios.
+        </li>
+
+
+        <li>
+          🛰️ <b>Satellite Laser Ranging Task Scheduling Optimization</b>
+          · <i>NSFC Project, 2020–2022</i><br>
+
+          Developed multi-constraint scheduling models and optimization algorithms
+          for satellite laser ranging, addressing resource allocation
+          and observation-task conflicts in real-time observation systems.
+        </li>
+
+
+        <li>
+          🔭 <b>Telescope Auto-Focusing Technology</b>
+          · <i>NSFC Sub-project, 2021–2023</i><br>
+
+          Developed image-based focus evaluation algorithms and automatic
+          focusing strategies for astronomical telescope systems,
+          together with an INDI-based auto-focusing software system.
+        </li>
       </ul>
     </section>
 
+
+    <!-- ===== Skills ===== -->
     <section id="skills">
-      <h2>Skills</h2>
-      <p>C++ · Python · Data Mining · Web Crawling · Databases · Academic Writing</p>
+      <h2>Research & Technical Skills</h2>
+
+      <ul>
+        <li>
+          <b>Research:</b>
+          Large Language Models · LLM Agents · Agent Memory ·
+          Knowledge Graphs · Hypergraphs · Knowledge Reasoning ·
+          Retrieval-Augmented Generation
+        </li>
+
+        <li>
+          <b>Machine Learning:</b>
+          PyTorch · Transformers · Graph Neural Networks ·
+          Representation Learning
+        </li>
+
+        <li>
+          <b>Programming & Tools:</b>
+          Python · C++ · Git · Linux · LaTeX
+        </li>
+      </ul>
     </section>
 
+
+    <!-- ===== Honors ===== -->
     <section id="honors">
       <h2>Honors & Awards</h2>
+
       <ul>
-        <li>🎖 2022 National Postgraduate Scholarship</li>
-        <li>🏅 Tsung-Dao Lee Physics Class Outstanding Student Award (top 1%)</li>
-        <li>✨ UCAS Merit Student (2021–2025)</li>
+        <li>
+          🎖 <b>National Scholarship for Graduate Students</b>, 2022
+        </li>
+
+        <li>
+          🏅 <b>Tsung-Dao Lee Physics Class Outstanding Student Award</b>
+          <span style="color:#666;">(Top 1%)</span>
+        </li>
+
+        <li>
+          ✨ <b>UCAS Merit Student</b>, 2021–2025
+        </li>
       </ul>
     </section>
 
-    <footer>© 2026 Mengxue Yang | University of Chinese Academy of Sciences</footer>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+      © 2026 Mengxue Yang · University of Chinese Academy of Sciences
+    </footer>
+
   </div>
 
-  <!-- Back to Top Button -->
+
+  <!-- ===== Back to Top Button ===== -->
   <button id="topBtn" title="Back to top">↑</button>
 
+
+  <!-- ===== JavaScript ===== -->
   <script>
-    // Smooth scroll navbar highlight
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll("nav a");
 
     window.addEventListener("scroll", () => {
       let current = "";
+
       sections.forEach(section => {
         const sectionTop = section.offsetTop - 120;
-        if (scrollY >= sectionTop) current = section.getAttribute("id");
+
+        if (window.scrollY >= sectionTop) {
+          current = section.getAttribute("id");
+        }
       });
+
       navLinks.forEach(link => {
         link.classList.remove("active");
+
         if (link.getAttribute("href") === "#" + current) {
           link.classList.add("active");
         }
       });
     });
 
-    // Back to top button
+
     const topBtn = document.getElementById("topBtn");
-    window.onscroll = function() {
-      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+
+    window.addEventListener("scroll", () => {
+      if (
+        document.body.scrollTop > 300 ||
+        document.documentElement.scrollTop > 300
+      ) {
         topBtn.style.display = "block";
       } else {
         topBtn.style.display = "none";
       }
-    };
+    });
+
+
     topBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
     });
   </script>
+
 </body>
 </html>
+```
