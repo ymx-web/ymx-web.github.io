@@ -141,11 +141,25 @@
     }
 
     li {
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     a {
       color: var(--primary);
+    }
+
+    .paper-link {
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .paper-link:hover {
+      text-decoration: underline;
+    }
+
+    .note {
+      color: #666;
+      font-size: 14px;
     }
 
     /* ===== Footer ===== */
@@ -198,6 +212,7 @@
     }
   </style>
 </head>
+
 
 <body>
 
@@ -337,36 +352,42 @@
       <h2>Professional Experience</h2>
 
       <ul>
-       ```html id="r2h3pf"
-<li>
-  <b>Qingyun Program Research Intern</b>, Tencent ·
-  <i>2026</i><br>
-  Conducted research on <b>LLM agents and long-term memory</b>
-  for long-form content generation.
-  Developed a structured narrative agent memory framework for maintaining
-  evolving characters, events, relationships, and narrative states
-  across long-horizon generation, with a focus on
-  <b>memory consistency</b>,
-  <b>efficient retrieval</b>, and
-  <b>dynamic state evolution</b>.
-</li>
-```
+
+        <li>
+          <b>Qingyun Program Research Intern</b>, Tencent ·
+          <i>2026</i><br>
+
+          Conducted research on
+          <b>LLM agents and long-term memory</b>
+          for long-form content generation.
+          Developed a structured narrative agent memory framework
+          for maintaining evolving characters, events, relationships,
+          and narrative states across long-horizon generation,
+          with a focus on
+          <b>memory consistency</b>,
+          <b>efficient retrieval</b>, and
+          <b>dynamic state evolution</b>.
+        </li>
 
 
         <li>
           <b>IT Engineer</b>,
           China United Network Communications Group Co., Ltd. (China Unicom) ·
           <i>Jul 2018 – Jun 2020</i><br>
+
           Worked on network systems, data management, and software optimization
           for large-scale telecommunications services.
         </li>
 
+
         <li>
           <b>Cloud Computing Intern</b>, Amazon China ·
           <i>Jul 2016 – Mar 2017</i><br>
+
           Participated in cloud computing and data service projects,
           with experience in distributed systems and cloud infrastructure.
         </li>
+
       </ul>
     </section>
 
@@ -375,9 +396,13 @@
     <section id="publications">
       <h2>Selected Publications</h2>
 
+
+      <!-- ===== Published / Accepted ===== -->
       <h3>Published / Accepted</h3>
 
       <ul>
+
+        <!-- HyperCoT -->
         <li>
           <b>
             Learning to Think on Hypergraph:
@@ -393,56 +418,93 @@
           </i>,
           pp. 25562–25579, 2026.<br>
 
-          <a href="https://aclanthology.org/2026.acl-long.1172/"
-             target="_blank">[Paper]</a>
+          <a
+            class="paper-link"
+            href="https://aclanthology.org/2026.acl-long.1172/"
+            target="_blank"
+          >[Paper]</a>
           · <b>First Author</b>
         </li>
 
 
+        <!-- SLiNT -->
         <li>
           <b>
             SLiNT: Structure-aware Language Model with Injection and
             Contrastive Training for Knowledge Graph Completion.
           </b><br>
 
-          <i>
-            Proceedings of the 2025 Conference on Empirical Methods
-            in Natural Language Processing (EMNLP 2025)
-          </i>.<br>
+          <b>Mengxue Yang</b>, Chun Yang, Jiaqi Zhu, Jiafan Li,
+          Jingqi Zhang, Yuyang Li, and Ying Li.<br>
 
-          <b>First Author</b>
+          <i>
+            Findings of the Association for Computational Linguistics:
+            EMNLP 2025
+          </i>,
+          pp. 13658–13671, 2025.<br>
+
+          <a
+            class="paper-link"
+            href="https://aclanthology.org/2025.findings-emnlp.736/"
+            target="_blank"
+          >[Paper]</a>
+          · <b>First Author</b>
         </li>
 
 
+        <!-- CARE -->
         <li>
           <b>
             CARE: A Constraint-Aware Hypergraph Framework for
             Knowledge-Driven Event-Centric Retrieval.
           </b><br>
 
-          <i>
-            ACM International Conference on Multimedia Retrieval
-            (ICMR 2026)
-          </i>.<br>
+          <b>Mengxue Yang</b>, Xitong Li, Ziyi Yang,
+          Jingqi Zhang, Xiaruo Zhang, and Ying Li.<br>
 
-          <b>First Author</b>
+          <i>
+            Proceedings of the 2026 International Conference on
+            Multimedia Retrieval (ICMR 2026)
+          </i>,
+          pp. 395–404, 2026.<br>
+
+          <a
+            class="paper-link"
+            href="https://doi.org/10.1145/3805622.3810679"
+            target="_blank"
+          >[Paper]</a>
+          · <b>First Author</b>
         </li>
 
 
+        <!-- ViSR-KGC -->
         <li>
           <b>
             ViSR-KGC: Visual Subgraph Reasoning with Vision-Language
             Models for Multimodal Knowledge Graph Completion.
           </b><br>
 
-          <i>
-            ACM Multimedia (ACM MM 2026)
-          </i>.<br>
+          Jiafan Li<sup>*</sup>,
+          <b>Mengxue Yang<sup>*</sup></b>,
+          Jiaqi Zhu, Liang Chang, Ying Li, and Hongan Wang.<br>
 
-          <b>First Co-Author</b>
+          <i>
+            Proceedings of the 34th ACM International Conference
+            on Multimedia (ACM MM 2026)
+          </i>,
+          Rio de Janeiro, Brazil, 2026.<br>
+
+          <a
+            class="paper-link"
+            href="https://doi.org/10.1145/3767308.3836133"
+            target="_blank"
+          >[Paper]</a>
+          · <b>Co-First Author</b>
+          · <span class="note"><sup>*</sup> Equal contribution</span>
         </li>
 
 
+        <!-- Telescope -->
         <li>
           <b>
             Sharpness Evaluation Algorithm Based on Real-Time
@@ -457,6 +519,7 @@
         </li>
 
 
+        <!-- SLR -->
         <li>
           <b>
             Optimization Algorithm for Satellite Laser Ranging
@@ -469,17 +532,23 @@
 
           <b>First Author</b>
         </li>
+
       </ul>
 
 
+      <!-- ===== Under Review ===== -->
       <h3>Under Review</h3>
 
       <ul>
+
+        <!-- EvoEpiHG -->
         <li>
           <b>
             EvoEpiHG: Self-Evolving Epistemic Hypergraph Framework
             for Memory Consistency in Long-Session LLM Agents.
           </b><br>
+
+          <b>Mengxue Yang</b> et al.<br>
 
           <i>Under Review, AAAI 2027</i>.<br>
 
@@ -487,6 +556,7 @@
         </li>
 
 
+        <!-- MTSF-TL -->
         <li>
           <b>
             MTSF-TL: Adaptive Multivariate Time Series Forecasting
@@ -497,7 +567,9 @@
 
           <b>Collaborative Work</b>
         </li>
+
       </ul>
+
     </section>
 
 
@@ -506,6 +578,7 @@
       <h2>Research Projects</h2>
 
       <ul>
+
         <li>
           🧠 <b>Long-Term Memory for LLM Agents</b>
           · <i>2025–Present</i><br>
@@ -527,10 +600,12 @@
           · <i>Ministerial-level Research Project, 2023–Present</i><br>
 
           Developed knowledge-enhanced intelligent systems for emergency rescue,
-          integrating <b>knowledge graphs</b>,
+          integrating
+          <b>knowledge graphs</b>,
           <b>large language models</b>, and
           <b>structured reasoning</b>
-          to support knowledge organization, information retrieval,
+          to support knowledge organization,
+          information retrieval,
           and decision assistance in complex disaster scenarios.
         </li>
 
@@ -543,18 +618,22 @@
           · <i>MIIT Research Project</i><br>
 
           Designed time-series data indexing and hybrid storage mechanisms
-          for industrial data management, and developed efficient data ingestion
-          and query pipelines for large-scale industrial IoT scenarios.
+          for industrial data management,
+          and developed efficient data ingestion and query pipelines
+          for large-scale industrial IoT scenarios.
         </li>
 
 
         <li>
-          🛰️ <b>Satellite Laser Ranging Task Scheduling Optimization</b>
+          🛰️ <b>
+            Satellite Laser Ranging Task Scheduling Optimization
+          </b>
           · <i>NSFC Project, 2020–2022</i><br>
 
-          Developed multi-constraint scheduling models and optimization algorithms
-          for satellite laser ranging, addressing resource allocation
-          and observation-task conflicts in real-time observation systems.
+          Developed multi-constraint scheduling models
+          and optimization algorithms for satellite laser ranging,
+          addressing resource allocation and observation-task conflicts
+          in real-time observation systems.
         </li>
 
 
@@ -562,10 +641,11 @@
           🔭 <b>Telescope Auto-Focusing Technology</b>
           · <i>NSFC Sub-project, 2021–2023</i><br>
 
-          Developed image-based focus evaluation algorithms and automatic
-          focusing strategies for astronomical telescope systems,
+          Developed image-based focus evaluation algorithms
+          and automatic focusing strategies for astronomical telescope systems,
           together with an INDI-based auto-focusing software system.
         </li>
+
       </ul>
     </section>
 
@@ -575,23 +655,35 @@
       <h2>Research & Technical Skills</h2>
 
       <ul>
+
         <li>
           <b>Research:</b>
-          Large Language Models · LLM Agents · Agent Memory ·
-          Knowledge Graphs · Hypergraphs · Knowledge Reasoning ·
+          Large Language Models ·
+          LLM Agents ·
+          Agent Memory ·
+          Knowledge Graphs ·
+          Hypergraphs ·
+          Knowledge Reasoning ·
           Retrieval-Augmented Generation
         </li>
 
         <li>
           <b>Machine Learning:</b>
-          PyTorch · Transformers · Graph Neural Networks ·
+          PyTorch ·
+          Transformers ·
+          Graph Neural Networks ·
           Representation Learning
         </li>
 
         <li>
           <b>Programming & Tools:</b>
-          Python · C++ · Git · Linux · LaTeX
+          Python ·
+          C++ ·
+          Git ·
+          Linux ·
+          LaTeX
         </li>
+
       </ul>
     </section>
 
@@ -601,25 +693,28 @@
       <h2>Honors & Awards</h2>
 
       <ul>
+
         <li>
           🎖 <b>National Scholarship for Graduate Students</b>, 2022
         </li>
 
         <li>
           🏅 <b>Tsung-Dao Lee Physics Class Outstanding Student Award</b>
-          <span style="color:#666;">(Top 1%)</span>
+          <span class="note">(Top 1%)</span>
         </li>
 
         <li>
           ✨ <b>UCAS Merit Student</b>, 2021–2025
         </li>
+
       </ul>
     </section>
 
 
     <!-- ===== Footer ===== -->
     <footer>
-      © 2026 Mengxue Yang · University of Chinese Academy of Sciences
+      © 2026 Mengxue Yang ·
+      University of Chinese Academy of Sciences
     </footer>
 
   </div>
@@ -631,33 +726,43 @@
 
   <!-- ===== JavaScript ===== -->
   <script>
+
+    // Navigation highlight
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll("nav a");
 
     window.addEventListener("scroll", () => {
+
       let current = "";
 
       sections.forEach(section => {
+
         const sectionTop = section.offsetTop - 120;
 
         if (window.scrollY >= sectionTop) {
           current = section.getAttribute("id");
         }
+
       });
 
       navLinks.forEach(link => {
+
         link.classList.remove("active");
 
         if (link.getAttribute("href") === "#" + current) {
           link.classList.add("active");
         }
+
       });
+
     });
 
 
+    // Back to top button
     const topBtn = document.getElementById("topBtn");
 
     window.addEventListener("scroll", () => {
+
       if (
         document.body.scrollTop > 300 ||
         document.documentElement.scrollTop > 300
@@ -666,17 +771,22 @@
       } else {
         topBtn.style.display = "none";
       }
+
     });
 
 
     topBtn.addEventListener("click", () => {
+
       window.scrollTo({
         top: 0,
         behavior: "smooth"
       });
+
     });
+
   </script>
 
 </body>
+
 </html>
 ```
